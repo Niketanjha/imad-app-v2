@@ -23,6 +23,15 @@ request.onereadystatechange=function(){
         }
 }
 };
+
+var nameInput=document.getElementById('name');
+var name=nameInput.value;
+var submit=document.getElementById('submit_btn');
+submit.oneclick=function(){
+    
+};
+
+
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
