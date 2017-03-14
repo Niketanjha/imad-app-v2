@@ -15,7 +15,14 @@ app.get('/counter',function (req,res){
     res.send(counter.toString());
 });
 
-
+var request=new XMLHttpRequest();
+request.onereadystatechange=function(){
+    if(request.readystate___XMLHttpRequest.DONE){
+        if(request.status===200){
+            request.respondText;
+        }
+}
+};
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
