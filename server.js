@@ -15,21 +15,6 @@ app.get('/counter',function (req,res){
     res.send(counter.toString());
 });
 
-var request=new XMLHttpRequest();
-request.onereadystatechange=function(){
-    if(request.readystate___XMLHttpRequest.DONE){
-        if(request.status===200){
-            request.respondText;
-        }
-}
-};
-
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
-var submit=document.getElementById('submit_btn');
-submit.oneclick=function(){
-    
-};
 
 
 app.get('/article-one', function (req, res) {
