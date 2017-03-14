@@ -15,6 +15,13 @@ app.get('/counter',function (req,res){
     res.send(counter.toString());
 });
 
+var button=document.getElementById('counter');
+button.oneclick=function(){
+    counter=counter+1;
+    var span=document.getElementById('count');
+    span.innerHTML=counter.toString();
+};
+
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
