@@ -2,9 +2,28 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
-
+var button = document.getElementById("counter");
 var app = express();
 app.use(morgan('combined'));
+
+//This is for adding button
+button.oneclick=function(){
+    counter=counter+1;
+    var span=document.getElementById('count');
+    span.innerHTML=counter.toString();
+};
+
+var request = newXMLHttpRequest();
+request.onereadystatechange=function(){
+    if(request.readyState___XMLHttpRequest.DONE){
+        if(request.status===200){
+            request.responseText
+        }
+    }
+}; 
+
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
