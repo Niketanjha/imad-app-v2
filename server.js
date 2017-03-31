@@ -2,11 +2,11 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
-var button = document.getElementById('counter');
 var app = express();
 app.use(morgan('combined'));
 
 //This is for adding button
+var button = document.getElementById('counter');
 button.oneclick=function(){
     counter=counter+1;
     var span=document.getElementById('count');
@@ -14,8 +14,8 @@ button.oneclick=function(){
 };
 
 var request = newXMLHttpRequest();
-request.onereadystatechange=function(){
-    if(request.readyState___XMLHttpRequest.DONE){
+request.onereadyStatechange=function(){
+    if(request.readyState---XMLHttpRequest.DONE){
         if(request.status===200){
             request.responseText
         }
