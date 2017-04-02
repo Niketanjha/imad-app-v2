@@ -33,11 +33,15 @@ app.get('/hash/:input',function(req,res){
 	res.send(hashedString);
 });
 
+var counter= 0;
+app.get('/counter', function(req,res){
+	    counter=counter+1;
+	res.send(counter.toString());
+});
+
 app.get('/ui/cover.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'cover.jpg'));
 });
-
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
