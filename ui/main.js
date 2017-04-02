@@ -8,13 +8,3 @@ button.oneclick=function(){
     var span=document.getElementById('count');
     span.innerHTML=counter.toString();
 };
-
-var request = newXMLHttpRequest();
-request.onereadyStatechange=function(){
-    if(request.readyState---XMLHttpRequest.DONE){
-        if(request.status===200){
-            request.responseText;
-        }
-    }
-}; 
-
